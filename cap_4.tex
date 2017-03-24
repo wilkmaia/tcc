@@ -1,0 +1,29 @@
+%------------------------------------------------
+\chapter{Considerações Finais}\label{Conclusao}
+%---------------------------------------------------------
+
+\section{Conclusão}
+O desenvolvimento de circuitos para a extração de energia de ondas de radiofrequência remotamente transmitidas proporciona a utilização de dispositivos que não necessitam de uma fonte de alimentação dedicada, seja ela uma bateria ou conexão direta com alguma rede de distribuição. Esse tipo de tecnologia é, particularmente, conveniente para aplicações de comunicação sem fio, como o RFID, aplicado em diversos setores.
+
+O projeto e a implementação desse tipo de circuito exige criteriosa análise, principalmente do ponto de vista energético. Devido à grande dissipação de energia uma vez que a onda é transmitida, a porção que pode ser ativamente utilizada pelo dispositivo receptor é bastante limitada no tempo. Em termos práticos, a potência disponível para o receptor está na ordem de microwatts. Isso implica na necessidade de se modelar dispositivos bastante econômicos, o que, na maior parte dos casos, quer dizer que os transistores estão trabalhando em região de sub-limiar.
+
+Através das simulações realizadas, observou-se que os módulos projetados apresentam consumo energético dentro dos limites esperados. A Tabela \ref{tab:all_modules_currents} sumariza os valores de corrente entregues pelo retificador a cada um dos demais módulos projetados. Considerando a tensão de alimentação nominal de $3,5~V$ que foi utilizada no decorrer das análises, chega-se à conclusão de que o sistema como um todo exige uma potência de, aproximadamente, $68,944~\mu W$ para funcionar. Considerando a eficiência observada em simulação para o retificador, de $7,75\%$, seria necessário que esse módulo recebesse, no mínimo $889,6~\mu W$ da onda transmitida.
+
+Na literatura, são encontrados estudos de retificadores com melhor rendimento que o utilizado neste trabalho. De forma direta, quanto maior o rendimento energético desse módulo, menor a potência exigida na entrada para alimentação dos demais, o que, em termos práticos, significa que a etiqueta pode ser alimentada a uma distância maior da fonte emissora. O retificador aqui apresentado foi escolhido por ser um dispositivo já consolidado na literatura.
+
+As análises realizadas dos módulos de forma individual mostraram seu funcionamento independentemente dos demais. Essa análise é útil para mostrar que esses módulos podem ser utilizados em outras aplicações onde sejam necessários. Da mesma forma, o objetivo de se desenvolver um sistema genérico de fornecimento de energia para etiquetas passivas foi alcançado, uma vez que não há requisitos de projeto que liguem módulos distintos. Outra característica que garante a generalidade do sistema proposto é o não desenvolvimento de um modulador ou de um demodulador. Esses módulos são dependentes da forma de comunicação utilizada no processo. Desta forma, um modulador e um demodulador quaisquer podem ser acrescentados de forma a garantir a comunicação da etiqueta com a fonte emissora de forma eficaz.s
+
+As simulações dos módulos foram realizadas em nível de esquemático. É possível e esperado que haja diferenças dos valores observados caso eles sejam, de fato, implementados. Essas diferenças são devidas aos erros de processo e às resistências e capacitâncias parasitas que se formam nos pontos de conexão e em regiões diversas dos sistemas. Regulações nas dimensões dos transistores podem ser feitas para corrigir possíveis problemas que venham a surgir.
+
+Os circuitos referencial de corrente e regulador de tensão implementados são dependentes da temperatura. Portanto, numa aplicação real, com efeitos de aquecimento e onde a temperatura não é controlada, o comportamento desses módulos seria diferente do esperado vide simulação.
+
+
+\section{Trabalhos Futuros}
+Para trabalhos futuros, sugerem-se os itens a seguir:
+
+\begin{itemize}
+	\item Realizar teste com retificadores de melhor rendimento e verificar sua adaptação junto ao sistema projetado;
+	\item Tornar os circuitos referencial de corrente e regulador de tensão independentes de temperatura;
+	\item Implementar o leiaute dos módulos, de modo a extrair, ainda em simulação, os valores de capacitância e resistência parasitas, a fim de realizar simulações mais precisas;
+	\item Construir o sistema completo proposto em silício e avaliar seu desempenho em aplicações reais.
+\end{itemize}
