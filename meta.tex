@@ -137,6 +137,12 @@
 % Conta o número de páginas
 \usepackage{lastpage}
 
+% Cálculo do total de folhas
+\usepackage{refcount}
+\newcommand{\sumoffset}[2]{\number\numexpr\getpagerefnumber{#2}+\getpagerefnumber{#1}\relax}
+
+\usepackage{totcount}
+
 % ---
 % Pacotes de citações
 % ---
@@ -174,6 +180,9 @@
 
 % Dados do projeto
 \newcommand{\nomedoaluno}{Wilk Coelho Maia}
+\tipotrabalho{Trabalho de Conclusão de Curso}
+\orientador{Marcos Eduardo do Prado Villarroel Zurita}
+\instituicao{Universidade Federal do Piauí}
 
 %% Comandos customizados
 
@@ -188,7 +197,7 @@
 \newcommand{\subde}{\emph{Clypeaster subdepressus}}
 \newcommand{\subsus}{\emph{C.~subdepressus}}
 
-\titulo{Projeto de um \textit{Front-End} Analógico para Etiquetas \textit{RFID} passivas}
+\titulo{Projeto de um \textit{Front-End} Analógico para Etiquetas passivas \textit{RFID}}
 \autor{\nomedoaluno}
 \local{Brasil}
 \data{2017}

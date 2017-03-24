@@ -54,6 +54,44 @@
 \newpage
 %============================ Fim da página de rosto ============================================
 
+%============================ Início da Ficha Catalográfica ==========================================
+% Dados
+% \codigo{M217p}
+\begin{fichacatalografica}
+	\sffamily
+	\vspace*{\fill}					% Posição vertical
+	\begin{center}					% Minipage Centralizado
+		\fbox{\begin{minipage}[t]{10.5cm}		% Largura
+				M217p
+				\hspace*{0.2cm}
+				\parbox[t]{8.3cm}{
+					Maia, Wilk Coelho.
+				
+					\hspace{0.5cm} \imprimirtitulo~/~\imprimirautor.~--~\imprimirdata.
+				
+					\hspace{0.5cm} \sumoffset{LastPage}{LastPreContentPage} f.\\
+				
+					\parbox[t]{9cm}{\hspace{0.5cm}Trabalho de Conclusão de Curso (Bacharelado em
+					Engenharia Elétrica) -- Universidade Federal do Piauí, Teresina, \imprimirdata.}
+				
+					\hspace{0.5cm} "\imprimirorientadorRotulo~\imprimirorientador"\\
+				
+					\hspace{0.5cm}
+					1. Engenharia Elétrica.
+					2. Etiquetas Passivas.
+					3. \textit{Front-End}.
+					4. \textit{RFID}.
+					I. Título.
+				}
+			
+				\hspace*{\fill} CDD 621.3
+		\end{minipage}}
+	\end{center}
+\end{fichacatalografica}
+
+\newpage
+%============================ Fim da Ficha Catalográfica ==============================================
+
 
 %============================ Início da folha de aprovação ============================================
 \begin{center}
@@ -191,5 +229,7 @@ The result obtained was a generic device that can be used in many kinds of tags.
 \clearpage
 \pdfbookmark{\contentsname}{contents} % Sets a PDF bookmark for the Table of Contents
 \tableofcontents*
+
+\label{LastPreContentPage}
 
 \clearpage
